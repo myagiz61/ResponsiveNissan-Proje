@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+footer .footer-links h2, .hero .slogan h2, .hero .slogan h1, .exterior h1, .interier h1 {
+  font-family: "Inter";
+  color: #252a34;
+}
+
+.hero .slogan p, .exterior p, .interier p {
+  color: #37393c;
+  font-size: 17px;
+}
+
+.cars-container button, .hero .slogan button, .exterior button, .interier button {
+  padding: 10px 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.exterior, .interier {
+  height: 50vh;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  align-items: center;
+  justify-content: center;
+}
+.exterior h1, .interier h1 {
+  color: white;
+}
+.exterior p, .interier p {
+  font-size: 22px;
+  text-align: center;
+  font-weight: 300;
+  max-width: 500px;
+  color: white;
+}
+.exterior button, .interier button {
+  border-radius: 0;
+  background-color: transparent;
+  border: 1px solid white;
+  transition: background-color 0.4s;
+}
+.exterior button:hover, .interier button:hover {
+  background-color: white;
+  color: black;
+  transition: 0.4s all;
+}
+
+body {
+  background-color: #eaeaea;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header img {
+  width: 100px;
+}
+header nav {
+  display: flex;
+  align-items: center;
+}
+header nav a {
+  text-decoration: none;
+  color: #252a34;
+}
+header nav a:hover {
+  color: crimson;
+  transition: 0.5s all;
+}
+header .nav-left a {
+  padding: 0 20px;
+  border-right: 1px solid gray;
+}
+header .nav-left a:last-child {
+  border-right: none;
+}
+header .nav-right {
+  margin-right: 20px;
+  gap: 30px;
+  font-size: 15px;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(rgb(215, 215, 215) 45%, #eaeaea 43%);
+}
+@media (max-width: 800px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.hero .slogan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+.hero .slogan img {
+  width: 150px;
+  mix-blend-mode: darken;
+}
+.hero .slogan button {
+  background-color: crimson;
+}
+.hero .slogan button:hover {
+  background-color: rgb(168, 16, 46);
+  transition: all 0.4s;
+}
+
+.images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.images .banner-img {
+  max-width: 800px;
+}
+@media (min-width: 800px) and (max-width: 1400px) {
+  .images .banner-img {
+    max-width: 500px;
+    align-items: center;
+  }
+}
+.images .track-img {
+  max-width: 500px;
+  mix-blend-mode: darken;
+}
+.images p {
+  max-width: 400px;
+}
+
+.interier {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.5), black), url("/SCss Responsive Nissan Proje/images/interior.jpg");
+}
+
+.cars-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0;
+}
+.cars-container .cars {
+  display: flex;
+}
+@media (max-width: 800px) {
+  .cars-container .cars {
+    flex-direction: column;
+  }
+}
+.cars-container .cars img {
+  width: 300px;
+  mix-blend-mode: darken;
+}
+.cars-container .cars h3 {
+  text-align: center;
+}
+.cars-container button {
+  background-color: aqua;
+  margin-top: 50px;
+}
+.cars-container button:hover {
+  background-color: rgb(0, 180, 180);
+  color: black;
+  transition: 0.4s all;
+}
+
+.exterior {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.8), black), url("/SCss Responsive Nissan Proje/images/exterior-4.jpg");
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: black;
+  padding: 50px;
+}
+@media (max-width: 800px) {
+  footer {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+footer img {
+  width: 60px;
+  height: 90px;
+}
+footer .footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  color: white;
+}
+@media (max-width: 800px) {
+  footer .footer-links {
+    align-items: center;
+  }
+}
+footer .footer-links h2 {
+  color: white;
+}
+footer .footer-links a {
+  text-decoration: none;
+  color: white;
+}/*# sourceMappingURL=style.css.map */

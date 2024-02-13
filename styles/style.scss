@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@import "variables";
+@import "modules";
+
+//RESPONSİVE YAPI
+
+@mixin mobile {
+  @media (max-width: 800px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: 800px) and (max-width: 1400px) {
+    @content;
+  }
+}
+
+body {
+  background-color: $bg-color;
+  overflow-x: hidden;
+}
+
+//! HEADER
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  img {
+    width: 100px;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    a {
+      text-decoration: none;
+      color: $text-color;
+      &:hover {
+        color: crimson;
+        transition: 0.5s all;
+      }
+    }
+  }
+  .nav-left {
+    a {
+      padding: 0 20px;
+      border-right: 1px solid gray;
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+
+  .nav-right {
+    margin-right: 20px;
+    gap: 30px;
+    font-size: 15px;
+  }
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(rgb(215, 215, 215) 45%, $bg-color 43%);
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .slogan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+
+    h1 {
+      @extend %heading;
+    }
+
+    p {
+      @extend %p;
+    }
+
+    img {
+      width: 150px;
+      mix-blend-mode: darken;
+    }
+
+    h2 {
+      @extend %heading;
+    }
+
+    button {
+      @extend %btn;
+      background-color: crimson;
+      &:hover {
+        background-color: rgb(168, 16, 46);
+        transition: all 0.4s;
+      }
+    }
+  }
+}
+
+.images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .banner-img {
+    max-width: 800px;
+    @include laptop {
+      max-width: 500px;
+      align-items: center;
+    }
+  }
+  .track-img {
+    max-width: 500px;
+    mix-blend-mode: darken;
+  }
+  p {
+    max-width: 400px;
+  }
+}
+
+.interier {
+  @extend %desing;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.5), black),
+    url("/SCss\ Responsive\ Nissan\ Proje/images/interior.jpg");
+}
+
+//Arabalar
+
+.cars-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0;
+
+  .cars {
+    display: flex;
+    @include mobile {
+      flex-direction: column;
+    }
+    img {
+      width: 300px;
+      mix-blend-mode: darken;
+    }
+
+    h3 {
+      text-align: center;
+    }
+  }
+
+  button {
+    @extend %btn;
+    background-color: aqua;
+    margin-top: 50px;
+
+    &:hover {
+      background-color: rgb(0, 180, 180);
+      color: black;
+      transition: 0.4s all;
+    }
+  }
+}
+
+.exterior {
+  @extend %desing;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.8), black),
+    url("/SCss\ Responsive\ Nissan\ Proje/images/exterior-4.jpg");
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: black;
+  padding: 50px;
+  @include mobile {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  img {
+    width: 60px;
+    height: 90px;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    color: white;
+    @include mobile {
+      align-items: center;
+    }
+    h2 {
+      @extend %heading;
+      color: white;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
